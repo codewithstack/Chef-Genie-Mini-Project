@@ -1,0 +1,278 @@
+html{
+    font-size: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .container-fluid{
+    width:20px;
+    height:20px;
+} */
+.head{
+    height: 50px;
+    background-color: rgb(233, 233, 118);
+}
+.head img{
+    position: absolute;
+    width:300px;
+    height:250px;
+    margin-bottom: 40px;
+}
+.foot{
+    height:50px;
+    background-color: blue;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.navbar ul{
+    position: relative;
+    margin-right: 30%;
+
+    
+}
+.navbar ul li{
+    margin-left:32px;
+}
+.navbar ul li a{
+    font-size: 18px;
+    font-weight: 600;
+    color:black;
+}
+.navbar ul li a:hover{
+    background-color: rgb(233, 233, 64);
+}
+.container-fluid .chef{
+    width:250px;
+    height: 250px;
+    
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: black; */
+    justify-content: space-between;
+    width:100%;
+    height: 500px;
+    /* background:url("—Pngtree—food menu fare meal background_869492.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* z-index:-; */
+    
+}
+.center .img{
+    width:50%;
+    font-size:24px;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.center .img img{
+    position: relative;
+    border-radius: 50%;
+    width:70%;
+    height: 80%;
+    filter: drop-shadow(2px 5px 5px rgb(216, 213, 9));
+}
+.para{
+    width:50%;
+    height: auto;
+    text-align: center;
+}
+.para h1{
+    position: relative;
+    color: white;
+    letter-spacing: 2px;
+    top:70px;
+    margin-top:50px;
+    font-size: 60px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 5px black);
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:200%;
+    height: auto;
+    position: relative;
+    margin-top: 150px;
+    /* background-color: blue; */
+    z-index: 1;
+    top:25px;
+}
+.searchbtn{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    background-color: white;
+    z-index:1;
+    color:black;
+    border-radius: 50px;
+    transition: all 0.6s ease-in-out ;
+}
+.box{
+    width:100%;
+    background-color: transparent;
+    height: 50px;
+    padding: 0px 0px 5px 15px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.6s ease-in-out ;
+    z-index: 1;
+}
+.active .box{
+    background-color: white;
+    color:black;
+    width:98%;
+    z-index: 1;
+}
+.active .searchbtn{
+    color:black;
+    transform: translate(630px,0.5px) scale(0.9);
+    z-index: 1;
+}
+.searchback{
+    position: absolute;
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    /* background-color: violet; */
+    transform: translate(1280px,110px);
+    top:385px;
+    z-index:1;
+}
+.ingredients{
+    display: flex;
+    flex-wrap: nowrap;
+    width:0%;
+    transition: all 0.8s ease-in-out ;
+}
+.ingredients p{
+    visibility: hidden;
+    /* transition: all 0.5s ease-in-out; */
+}
+.items-hide{
+    display: flex;
+    flex-wrap: wrap;
+    padding:20px;
+    width:97%;
+    height:200px;
+    margin:20px 20px 0 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(221, 209, 33, 0.295);
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+}
+.items-hide p{
+    /* border: 2px solid white; */
+    padding:2px 0 0 12px ;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    width:auto;
+    margin:5px 20px 0 20px;
+    height: 30px;
+    cursor: pointer;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}
+.items-hide p:hover{
+    text-align: center;
+    background-color:pink;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height: 100vh;
+    position: relative;
+    justify-content: space-evenly;
+    text-align: cente1r;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    margin-top: 20px;
+}
+.menu div{
+    margin: 20px 30px 0 30px;
+    /* box-shadow: 0px 2px 2px rgb(12, 9, 9); */
+    filter: drop-shadow(2px 5px 10px rgba(14, 10, 10, 0.534));
+    transition: all 0.5s ease-in-out;
+    border: none;
+    border-radius: 20px;
+}
+.menu div img{
+    margin:70px 0 20px 0;
+    height: 300px;
+    /* width:300px; */
+}
+
+.card-body h5{
+    font-size: 35px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.card-body p{
+    display: none;
+    /* visibility: none; */
+}
+.card{
+    width:800px;
+}
+
+.card a{
+    font-size: 20px;
+    border-radius: 20px;
+    transform: translate(0,-1px);
+    /* color:rgba(0, 0, 0, 0.603) */
+    background-color: black;
+    
+}
+
+.card a i{
+    position: relative;
+    margin-left: 10px;
+    font-size: 28px;
+}
+.popular{
+    position: relative;
+    font-size:50px;
+    margin-left: 20px;
+    filter: drop-shadow(2px 2px 2px black);
+}
+.popular span{
+    color:rgb(228, 176, 33);
+}
+
+.video{
+    position: absolute;
+    background-size: contain;
+    width: 140%;
+    z-index: 0;
+    background-position: center;
+    top:10%;
+    overflow: hidden;
+    box-shadow: 5px 2px 8px 5px black;
+    
+}
+.video::before{
+    content: "";
+    position: relative;
+    top:12px;
+    bottom:0;
+   
+}
+
+
+    
