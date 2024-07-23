@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <% const options = { method: 'GET', url: 'https://spotify-scraper.p.rapidapi.com/v1/track/download', params: { track: 'Lego House Ed Sheeran'
+        }, headers: { 'X-RapidAPI-Key': '7d73edc9d4mshead0ad25150f704p1d6463jsn2da0b0d46451', 'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com' } };
+        try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); } %>
+
+        <h1><% response %></h1>
+    </body>
+</html>

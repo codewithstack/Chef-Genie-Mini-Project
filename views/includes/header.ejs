@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg position-fixed w-100">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img class="logo" src="/logo.png" alt="" /></a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/"><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery"><i class="fa-brands fa-envira"></i>Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact"><i class="fa-solid fa-phone"></i>Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help"><i class="fa-solid fa-circle-info"></i>Help</a>
+                </li>
+                <select name="lang" onchange="languageChanger()" id="google_translate_element">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <% if(!currUser) {%>
+                <li class="nav-item">
+                    <a class="nav-link signup" href="/signup">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link login" href="/login">Log In</a>
+                </li>
+                <% }%> <% if(currUser) {%>
+                <li class="nav-item">
+                    <a class="nav-link logout" href="/logout">Log Out</a>
+                </li>
+                <% }%>
+            </ul>
+        </div>
+    </div>
+</nav>

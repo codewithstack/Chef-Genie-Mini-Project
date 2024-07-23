@@ -1,0 +1,30 @@
+<%- layout('./layouts/boilerplate.ejs') %>
+<div class="menuBox searchWrapper">
+    <div class="container-fluid">
+        <div class="titleHead">
+            <h1 class="popular">Your <span>Search</span> <%= searches %> Recipes</h1>
+            <a href="/recipe">Back</a>
+        </div>
+        <div class="row">
+            <% for(let r of searchItem[0]){ %>
+            <div class="col-md-4">
+                <a href="/recipe_detail/<%= r._id %>" class="readMore">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="<%= r.Image %>" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= r.RecipeName %></h5>
+                            <p class="card-text">
+                                <b>Cuisine:</b> <%= r.Cuisine %> &nbsp;&nbsp;&nbsp;&nbsp; <br />
+                                <b>Diet:</b> <%= r.Diet %> &nbsp;&nbsp;&nbsp;&nbsp; <br />
+                                <b>Time:</b> <%= r.TotalTimeInMins %> Mins.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>

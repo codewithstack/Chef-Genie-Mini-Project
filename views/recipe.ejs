@@ -1,0 +1,62 @@
+<%- layout('./layouts/boilerplate.ejs') %>
+<div class="center">
+    <video autoplay loop muted plays-inline class="video">
+        <source src="/foodRecipe.mp4" type="video/mp4" />
+    </video>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="para">
+                    <div class="para-content">
+                        <h5>
+                            <i><span class="text-theme">W</span>elcome, <%= currUser.username %></i>
+                        </h5>
+                        <h1>It's not just Food, It's an Experience.</h1>
+                    </div>
+                    <div class="searchBar">
+                        <% if(currUser){ %>
+                        <div class="search">
+                            <form method="get" action="/search" autocomplete="off">
+                                <input
+                                    type="text"
+                                    class="box"
+                                    id="searchStr"
+                                    name="search"
+                                    placeholder="Type Ingredients to Search (comma seperated)..."
+                                />
+                                <button type="submit" class="btn btn-danger submit"><i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                        <% } %> <%- include('includes/flash.ejs') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menuBox">
+    <div class="container-fluid">
+        <h1 class="popular">Some <span>Recipes</span> Today</h1>
+        <div class="row">
+            <% for(let r of food){ %>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <a href="/recipe_detail/<%= r._id %>" class="readMore">
+                    <div class="card">
+                        <div class="img-box">
+                            <img src="<%= r.Image %>" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= r.RecipeName %></h5>
+                            <p class="card-text">
+                                <b>Cuisine:</b> <%= r.Cuisine %> &nbsp;&nbsp;&nbsp;&nbsp; <br />
+                                <b>Diet:</b> <%= r.Diet %> &nbsp;&nbsp;&nbsp;&nbsp; <br />
+                                <b>Time:</b> <%= r.TotalTimeInMins %> Mins.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
